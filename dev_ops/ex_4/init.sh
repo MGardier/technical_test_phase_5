@@ -56,7 +56,7 @@ mkdir -p ./filebeat
 if [ ! -f ./filebeat/filebeat.yml ]; then
   cat > ./filebeat/filebeat.yml << 'EOF'
 filebeat.inputs:
-- type: log
+- type: filestream
   enabled: true
   paths:
     - /var/log/*.log
